@@ -9,7 +9,7 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
+      <hemisphereLight intensity={0.5} groundColor='black' />
       <spotLight 
         position={[-20, 50, 10]}
         angle={0.12}
@@ -30,8 +30,10 @@ const Computers = ({ isMobile }) => {
 };
 
 const ComputersCanvas = () => {
+  //state
   const [isMobile, setIsMobile] = useState(false);
 
+  //side effect
   useEffect(() => {
     //Add listener for changes to screen size.
     const mediaQuery = window.matchMedia('(max-width: 500px)');
@@ -42,6 +44,7 @@ const ComputersCanvas = () => {
     //Define callback function to handle changes to the media query.
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
+      console.log(isMobile);
     };
 
     //Add callback function as a listener for changes to the media query
@@ -58,7 +61,7 @@ const ComputersCanvas = () => {
       frameloop='demand'
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [20, 3, 5], fov: 25 }} //setting where the user is looking at the object from [x,y,z]
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -69,14 +72,11 @@ const ComputersCanvas = () => {
         />
         <Computers isMobile={isMobile} />
       </Suspense>
-        <Computers />
+        
       <Preload all />
     </Canvas>
+    
   );
 };
 
 export default Computers;
-
-//npm WARN using --force Recommended protections disabled.
-//(node:15956) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [TLSSocket]. Use emitter.setMaxListeners() to increase limit
-//(Use `node --trace-warnings ...` to show where the warning was created)
