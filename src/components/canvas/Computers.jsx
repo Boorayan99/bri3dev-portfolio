@@ -9,7 +9,7 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.5} groundColor='black' />
+      <hemisphereLight intensity={0.15} groundColor='black' />
       <spotLight 
         position={[-20, 50, 10]}
         angle={0.12}
@@ -44,7 +44,6 @@ const ComputersCanvas = () => {
     //Define callback function to handle changes to the media query.
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
-      console.log(isMobile);
     };
 
     //Add callback function as a listener for changes to the media query
@@ -79,4 +78,4 @@ const ComputersCanvas = () => {
   );
 };
 
-export default Computers;
+export default ComputersCanvas;
