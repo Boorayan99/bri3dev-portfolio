@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@react-spring/core": "^9.7.3",
     "@react-three/drei": "^9.83.9",
     "@react-three/fiber": "^8.14.1",
     "framer-motion": "^10.16.4",
@@ -22,6 +23,8 @@
     "react-dom": "^18.2.0",
     "react-parallax-tilt": "^1.7.166",
     "react-router-dom": "^6.15.0",
+    "react-scripts": "^5.0.1",
+    "react-spring": "^9.7.2",
     "react-tilt": "^0.1.4",
     "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.152.2"
