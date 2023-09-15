@@ -15,8 +15,8 @@ import {
     git,
     meta,
     shopify,
-    carrent,
-    jobit,
+    ediani,
+    myshirt,
     tripguide,
     threejs,
   } from "../assets";
@@ -42,11 +42,11 @@ import {
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "ReactJS Developer",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "API/Backend Developer",
       icon: backend,
     },
     {
@@ -104,26 +104,26 @@ import {
   
   const experiences = [
     {
-      title: "React.js Developer",
+      title: "ReactJS Developer",
       company_name: "Ediani Tech Solutions",
       icon: meta,
       iconBg: "#383E56",
       date: "Jan 2023 - Now",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Developing new user-facing features using React.JS.",
+        "Building reusable components and front-end libraries for future use.",
+        "Translating designs and wireframes into high quality code.",
+        "Optimizing components for maximum performance across a vast array of web-capable devices and browsers",
       ],
     },
     {
-      title: "Full stack Developer",
+      title: "Junior Developer",
       company_name: "Eloise Creatives Ltd",
       icon: shopify,
       iconBg: "#383E56",
-      date: "Jan 2020 - Dec 2022",
+      date: "Dec 2021 - Dec 2022",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Developing and maintaining web applications using React.JS and other related technologies.",
         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
         "Implementing responsive design and ensuring cross-browser compatibility.",
         "Participating in code reviews and providing constructive feedback to other developers.",
@@ -160,9 +160,9 @@ import {
   
   const projects = [
     {
-      name: "Ediani",
+      name: "Ediani e-Shop",
       description:
-        "Web-based platform that allows users to search, and purchase brand new, high quality electronic gadgets from various providers, providing a convenient and efficient solution for online shoppers.",
+        "Currently under development, it's a web-based platform that allows users to search, and purchase brand new, high quality electronic gadgets from various providers, providing a convenient and efficient solution for online shoppers.",
       tags: [
         {
           name: "react",
@@ -173,12 +173,12 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "bootstrap",
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: " ",
+      image: ediani,
+      source_code_link: "https://github.com/Boorayan99/ediani-app.git",
     },
     {
       name: "MyTshirt",
@@ -194,12 +194,12 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "DalleAI",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: myshirt,
+      source_code_link: "https://github.com/Boorayan99/my3DTshirt.git",
     },
     {
       name: "Trip Radar",
@@ -215,12 +215,12 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "tailwindcss",
           color: "pink-text-gradient",
         },
       ],
       image: tripguide,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/Boorayan99/trip-radar.git",
     },
   ];
   

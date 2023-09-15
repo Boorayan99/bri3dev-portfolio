@@ -1,44 +1,65 @@
-import { useState, useRef, Suspense } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload } from "@react-three/drei";
-import * as random from "maath/random/dist/maath-random.esm";
+import React from "react";
+import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
+import { styles } from "../styles";
+import { services } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { fadeIn, textVariant } from "../utils/motion";
 
-const Stars = (props) => {
-  const ref = useRef();
-  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
-
-  useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
-  });
-
-  return (
-    <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
-        <PointMaterial
-          transparent
-          color='#f272c8'
-          size={0.002}
-          sizeAttenuation={true}
-          depthWrite={false}
+const ServiceCard = ({ index, title, icon }) => (
+  <Tilt className='xs:w-[250px] w-full'>
+    <motion.div
+      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+    >
+      <div
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+      >
+        <img
+          src={icon}
+          alt='web-development'
+          className='w-16 h-16 object-contain'
         />
-      </Points>
-    </group>
-  );
-};
 
-const StarsCanvas = () => {
+        <h3 className='text-white text-[20px] font-bold text-center'>
+          {title}
+        </h3>
+      </div>
+    </motion.div>
+  </Tilt>
+);
+
+const About = () => {
   return (
-    <div className='w-full h-auto absolute inset-0 z-[-1]'>
-      <Canvas camera={{ position: [0, 0, 1] }}>
-        <Suspense fallback={null}>
-          <Stars />
-        </Suspense>
+    <>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>Introduction</p>
+        <h2 className={styles.sectionHeadText}>Overview.</h2>
+      </motion.div>
 
-        <Preload all />
-      </Canvas>
-    </div>
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+      >
+        I&apos;m a high-energy full-stack web developer with experience and expertise in
+        JavaScript, and frameworks like ReactJS, Bootstrap, TailwindCSS 
+        and ThreeJS. I&apos;m a fast learner, I collaborate closely with clients to
+        create efficient, scalable, and user-friendly solutions. Let&apos;s work together
+        and bring your ideas to life, eh?
+      </motion.p>
+
+      <div className='mt-20 flex flex-wrap gap-10'>
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div>
+    </>
   );
 };
 
-export default StarsCanvas;
+export default SectionWrapper(About, "about");
