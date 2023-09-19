@@ -38,11 +38,11 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
+      title: "React.Js Developer",
       icon: web,
     },
     {
-      title: "ReactJS Developer",
+      title: "Mobile Web Developer",
       icon: mobile,
     },
     {
@@ -162,18 +162,18 @@ import {
     {
       name: "Ediani e-Shop",
       description:
-        "Currently under development, it's a web-based platform that allows users to search, and purchase brand new, high quality electronic gadgets from various providers, providing a convenient and efficient solution for online shoppers.",
+        "A dynamic and user-friendly ecommerce website providing a convenient and efficient solution for online shoppers.",
       tags: [
         {
-          name: "react",
+          name: "React.Js",
           color: "blue-text-gradient",
         },
         {
-          name: "javascript",
+          name: "JavaScript",
           color: "green-text-gradient",
         },
         {
-          name: "bootstrap",
+          name: "Bootstrap",
           color: "pink-text-gradient",
         },
       ],
@@ -186,15 +186,15 @@ import {
         "Web application that enables users to customize t-shirt designs on a 3D model using AI",
       tags: [
         {
-          name: "react",
+          name: "React.Js",
           color: "blue-text-gradient",
         },
         {
-          name: "threejs",
+          name: "Three.Js",
           color: "green-text-gradient",
         },
         {
-          name: "DalleAI",
+          name: "Dall-E2",
           color: "pink-text-gradient",
         },
       ],
@@ -207,15 +207,15 @@ import {
         "A comprehensive travel advisory platform that offers users curated recommendations for popular travel destinations, local hospitality services and local weather updates.",
       tags: [
         {
-          name: "react",
+          name: "React.Js",
           color: "blue-text-gradient",
         },
         {
-          name: "javascript",
+          name: "JavaScript",
           color: "green-text-gradient",
         },
         {
-          name: "tailwindcss",
+          name: "Tailwindcss",
           color: "pink-text-gradient",
         },
       ],
