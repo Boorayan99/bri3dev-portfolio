@@ -81,9 +81,8 @@ const Works = () => {
           className='w-full flex mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
           Here are some sample projects I&apos;ve built and maintain. Each project is
-          briefly described with links to code repositories and live demos in it 
-          showing my ability to solve complex problems, work with
-          different technologies, and manage projects effectively.
+          briefly described with links to code repositories showing my ability to solve 
+          complex problems, work with different technologies, and manage projects effectively.
         </motion.p>
       </div>
 
