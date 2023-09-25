@@ -38,20 +38,20 @@ import {
   
   const services = [
     {
-      title: "React.Js Developer",
+      title: "Frontend Web Developer",
       icon: web,
     },
     {
-      title: "Mobile Web Developer",
+      title: "ReactJS Developer",
       icon: mobile,
+    },
+    {
+      title: "ThreeJS Developer",
+      icon: creator,
     },
     {
       title: "API/Backend Developer",
       icon: backend,
-    },
-    {
-      title: "Content Creator",
-      icon: creator,
     },
   ];
   
